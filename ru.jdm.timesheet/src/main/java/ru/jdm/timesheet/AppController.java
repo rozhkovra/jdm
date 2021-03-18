@@ -22,7 +22,7 @@ public class AppController
     }
 
     @RequestMapping("/user")
-    public ModelAndView user(Long userId) {
+    public ModelAndView user(@RequestParam(value = "userId", required = false) Long userId) {
         User user = new User();
         user.setLogin("user1");
         user.setName("Иван");
